@@ -1,5 +1,7 @@
 # NOTES
 
+[toc]
+
 ## lec2: Modern SQL
 
 ### sql的分类
@@ -73,6 +75,31 @@ FROM student WHERE login LIKE '%@cs';
 SELECT COUNT(DISTINCT login)
 FROM student WHERE login LIKE '%@cs';
 ```
+
+Aggregate之外的其他列的输出未定义（e.cid 下面未定义）, Non-aggregated value必须出现在一个group by子句中
+
+```sql
+# e.cid undefined
+SELECT AVG(s.gpa), e.cid
+	FROM enrolled AS e, student AS s
+WHERE e.sid = s.sid;
+
+SELECT AVG(s.gpa), e.cid
+	FROM enrolled AS e, student AS s
+WHERE e.sid = s.sid
+GROUP BY e.cid;
+```
+
+### String Operation
+
+SQL 标准规定字符串区分大小写且仅使用单引号，但是有一些比较特殊的字符串用法：
+
+Pattern Matching: The LIKE keyword is used for string matching in predicates.
+
+- “%” matches any substrings (including empty).
+-  “ _” matches any one character.
+
+Concatenation: Two vertical bars (“||”) will concatenate two or more strings together into a single string.
 
 
 
@@ -1258,7 +1285,7 @@ DBMS中锁的层级：
 - Intention-Exclusive (IX)：表示在较低级别使用独占或共享锁进行显式锁定。 
 - Shared-Intention-Exclusive (SIX)：以该节点为根的子树在共享模式下显式锁定，并且在较低级别上使用独占模式锁进行显式锁定。
 
-<img src="assets/ee320848de434f91ad750c720bf98b77~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp" alt="img" style="zoom:67%;" />
+<img src="assets/image-20230918192455668.png" alt="image-20230918192455668" style="zoom:50%;" />
 
 > 在mysql中意向锁是一个表级锁，其作用就是指明接下来的事务将会用到哪种锁。
 >
