@@ -2471,12 +2471,16 @@ CREATE MATERIALIZED VIEW cs_gpa AS
 
 
 
-### Reference
+## Reference
+
+课程网站：[Schedule | CMU 15-445/645 :: Intro to Database Systems (Spring 2023)](https://15445.courses.cs.cmu.edu/spring2023/schedule.html)
 
 [extendible hashing - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/467044503)
 
 [这篇 MySQL 索引和 B+Tree 讲得太通俗易懂 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/293128007)
 
-CMU-15445数据库系统导论笔记<十>—并发控制理论https://juejin.cn/post/7113355114110255117
+[CMU-15445数据库系统导论笔记<十>—并发控制理论 - 掘金 (juejin.cn)](https://juejin.cn/post/7113355114110255117)
 
-https://www.51cto.com/article/743293.html
+[美团一面：能不能通俗的解释下为什么要有意向锁这个东西？-51CTO.COM](https://www.51cto.com/article/743293.html)
+
+[CMU数据库系统学习笔记 | 高志远的个人主页 (gaozhiyuan.net)](https://gaozhiyuan.net/series/cmu-database-systems-notes)
